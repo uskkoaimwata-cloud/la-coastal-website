@@ -116,7 +116,7 @@ export default function Home() {
       ` }} />
 
       <div dangerouslySetInnerHTML={{ __html: `
-      <!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -232,10 +232,10 @@ footer{background:#123d49;color:#c9d6dc;text-align:center;padding:25px}.mobile-m
 <div class="container">
 <div class="section-head"><div class="eyebrow">Accommodation</div><h2>Our Rooms</h2><p>Choose from a range of comfortable accommodation options at La Coastal Guesthouse.</p></div>
 <div class="room-list">
+<div class="room-option"><div class="room-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/><path d="M2 17v2M22 17v2"/><path d="M2 12V8a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v2M12 12V8a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v2"/></svg></div><div><h3>Standard Double Room</h3><p>A comfortable room with one double bed, ideal for couples.</p></div></div>
+<div class="room-option"><div class="room-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 17v-4a1.5 1.5 0 0 1 1.5-1.5h6A1.5 1.5 0 0 1 10 12.5V17"/><path d="M14 17v-4a1.5 1.5 0 0 1 1.5-1.5h6a1.5 1.5 0 0 1 1.5 1.5V17"/><path d="M1 17v2M22 17v2"/><path d="M2 11.5V8a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3.5M14.5 11.5V8a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3.5"/></svg></div><div><h3>Standard Twin Room</h3><p>Two single beds, great for friends or colleagues travelling together.</p></div></div>
+<div class="room-option"><div class="room-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0"/><path d="M2 18c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0"/></svg></div><div><h3>Sea View Room</h3><p>Wake up to ocean views, a short walk from Independence Beach.</p></div></div>
 <div class="room-option"><div class="room-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><path d="M2 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1"/><circle cx="17.5" cy="9.5" r="2.3"/><path d="M15 20v-.7a4 4 0 0 1 3-3.9"/></svg></div><div><h3>Family Room</h3><p>Comfortable accommodation for families and small groups.</p></div></div>
-<div class="room-option"><div class="room-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><path d="M3 17v2M21 17v2"/><path d="M3 12V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></div><div><h3>Single Room</h3><p>A cosy option for guests travelling on their own.</p></div></div>
-<div class="room-option"><div class="room-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/><path d="M2 17v2M22 17v2"/><path d="M2 12V8a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v2M12 12V8a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v2"/></svg></div><div><h3>Double Room</h3><p>A comfortable room for two guests.</p></div></div>
-<div class="room-option"><div class="room-icon"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l1.7 5.7L19 10.5l-5.3 1.8L12 18l-1.7-5.7L5 10.5l5.3-1.8L12 3z"/></svg></div><div><h3>And Many More</h3><p>Ask us about our other available room options and accommodation.</p></div></div>
 </div>
 </div>
 </section>
@@ -289,7 +289,7 @@ footer{background:#123d49;color:#c9d6dc;text-align:center;padding:25px}.mobile-m
 <div><label for="guests">Number of guests</label><select id="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
 <div><label for="checkin">Check-in date</label><input id="checkin" type="date" required></div>
 <div><label for="checkout">Check-out date</label><input id="checkout" type="date" required></div>
-<div><label for="room">Room type</label><select id="room"><option>Standard Room</option><option>Deluxe Room</option><option>Family Room</option></select></div>
+<div><label for="room">Room type</label><select id="room"><option>Standard Double Bed Room</option><option>Twin Bed Standard Room</option><option>Seaview Room</option><option>Family Room</option></select></div>
 <div><label for="requests">Special request</label><input id="requests" placeholder="Optional"></div>
 <div class="full"><button class="btn btn-blue" type="submit" id="submitBtn">Send Booking Request</button><div class="notice" id="formNotice"></div></div>
 </form>
