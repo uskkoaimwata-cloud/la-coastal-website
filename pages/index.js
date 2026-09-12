@@ -1,8 +1,122 @@
 export default function Home() {
   return (
-    <div dangerouslySetInnerHTML={{ __html: `
+    <>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-   <!DOCTYPE html>
+      <style dangerouslySetInnerHTML={{ __html: `
+        :root{--navy:#174b5a;--blue:#087d9b;--sand:#e5f5f7;--cream:#f8fcfd;--gold:#39a7bb;--text:#263d45;--muted:#667b82;--white:#fff;--green:#218653}
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Public Sans',Helvetica,Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.6}
+        h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.01em}
+        a{text-decoration:none;color:inherit}
+        .container{width:min(1150px,92%);margin:auto}
+        header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(23,75,90,.97);color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.1)}
+        nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+        .logo{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--gold);font-weight:500}
+        .navlinks{display:flex;align-items:center;gap:25px}
+        .navlinks a{font-size:.94rem;color:#fff}
+        .navlinks a:hover{color:var(--gold)}
+        .btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 19px;border-radius:8px;border:0;cursor:pointer;transition:.2s}
+        .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+        .btn-blue{background:var(--blue);color:#fff}
+        .btn-outline{display:inline-block;border:1px solid #fff;color:#fff;padding:11px 19px;border-radius:8px;font-weight:800}
+        .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+        .hero{min-height:700px;padding-top:72px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(7,31,45,.85),rgba(7,31,45,.5)),linear-gradient(135deg,#0c2d3d,#174b5a)}
+        .hero-content{max-width:740px}
+        .eyebrow{display:inline-flex;align-items:center;gap:14px;text-transform:uppercase;letter-spacing:.32em;color:var(--gold);font-size:.72rem;font-weight:400;margin-bottom:22px}
+        .eyebrow::before{content:"";width:44px;height:1px;background:var(--gold)}
+        .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);line-height:1.08;margin-bottom:22px}
+        .hero p{font-size:1.06rem;max-width:620px;color:#c8dde0;margin-bottom:32px}
+        .hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+        .quick{margin-top:-46px;position:relative;z-index:5}
+        .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--white);border:1px solid #d5e5e7;border-radius:8px;box-shadow:0 18px 45px rgba(23,75,90,.08)}
+        .quick-item{padding:26px 28px;border-right:1px solid #d5e5e7}
+        .quick-item:last-child{border-right:0}
+        .quick-item strong{display:block;color:var(--navy);font-size:1rem;font-weight:500;font-family:'Fraunces',serif}
+        .quick-item span{font-size:.82rem;color:var(--muted)}
+        section{padding:100px 0}
+        .section-head{text-align:center;max-width:680px;margin:0 auto 56px}
+        .section-head .eyebrow{justify-content:center}
+        .section-head .eyebrow::after{content:"";width:44px;height:1px;background:var(--gold)}
+        .section-head h2{font-size:2.6rem;color:var(--navy);margin-bottom:14px}
+        .section-head p{color:var(--muted);font-size:1rem}
+        .about{background:var(--sand)}
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+        .about-image{height:460px;border-radius:8px;background:linear-gradient(135deg,#174b5a,#087d9b);display:flex;align-items:center;justify-content:center;font-size:4rem;box-shadow:24px 24px 0 rgba(23,75,90,.08)}
+        .about h2{font-size:2.5rem;color:var(--navy);margin-bottom:20px;line-height:1.15}
+        .about p{color:var(--muted);margin-bottom:16px}
+        .about strong{color:var(--navy);font-weight:500}
+        .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+        .feature{background:var(--cream);border:1px solid #d5e5e7;padding:22px;border-radius:8px;transition:.25s}
+        .feature:hover{border-color:var(--gold);transform:translateY(-3px)}
+        .feature strong{display:block;color:var(--navy);margin-bottom:6px;font-family:'Fraunces',serif;font-size:1.02rem}
+        .feature p{font-size:.9rem;color:var(--muted)}
+        .gallery{background:var(--cream)}
+        .gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:225px 225px;gap:14px}
+        .gallery-img{border-radius:8px;background:linear-gradient(135deg,#174b5a,#087d9b);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:2rem;transition:.3s}
+        .gallery-img:hover{filter:brightness(1.1)}
+        .g1{grid-row:1/3}
+        .rooms{background:var(--sand)}
+        .room-list{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:920px;margin:auto}
+        .room-option{display:flex;align-items:center;gap:22px;background:var(--cream);border:1px solid #d5e5e7;border-radius:8px;padding:28px;transition:.25s}
+        .room-option:hover{border-color:var(--gold);transform:translateY(-3px)}
+        .room-icon{min-width:60px;height:60px;border-radius:8px;background:var(--sand);display:grid;place-items:center;font-size:1.55rem}
+        .room-option h3{color:var(--navy);margin-bottom:4px;font-size:1.2rem}
+        .room-option p{color:var(--muted);font-size:.92rem}
+        .contact{background:var(--navy);color:#fff}
+        .contact .section-head h2{color:#fff}
+        .contact .section-head p{color:#a0c4c8}
+        .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px}
+        .contact-card,.booking-form{background:var(--cream);color:var(--text);padding:34px;border-radius:8px;border-top:3px solid var(--gold)}
+        .contact-card h3{color:var(--navy);margin-bottom:12px;font-size:1.5rem}
+        .contact-card>p{color:var(--muted);font-size:.94rem}
+        .contact-item{margin:18px 0;padding-bottom:16px;border-bottom:1px solid #d5e5e7}
+        .contact-item strong{display:block;color:var(--navy);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:4px}
+        .contact-item a{color:var(--text);font-size:1.05rem}
+        .contact-item a:hover{color:var(--gold)}
+        .contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+        .contact-actions .btn{border:1px solid var(--navy);color:var(--navy);background:transparent}
+        .contact-actions .btn:hover{background:var(--navy);color:#fff}
+        .contact-actions .btn-blue{background:var(--navy);color:#fff}
+        .contact-actions .btn-blue:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+        form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        label{font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+        input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d5e5e7;border-radius:8px;margin-top:7px;font:inherit;background:var(--white);transition:border-color .2s}
+        input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+        .full{grid-column:1/-1}
+        form .btn{width:100%;margin-top:6px}
+        .notice{font-size:.78rem;color:#8a958f;margin-top:12px;text-align:center}
+        .map{margin-top:28px;border-radius:8px;overflow:hidden;height:280px;border:1px solid #d5e5e7}
+        .map iframe{width:100%;height:100%;border:0}
+        .booking-success{display:none;text-align:center;padding:40px 20px}
+        .booking-success.show{display:block}
+        .booking-success h3{color:var(--navy);font-size:1.5rem;margin-bottom:12px}
+        .booking-success p{color:var(--muted);font-size:.95rem;line-height:1.6}
+        .booking-success .checkmark{width:60px;height:60px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:#fff;font-size:1.5rem}
+        footer{background:#0c2d3d;color:#7fa8ad;text-align:center;padding:30px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+        .mobile-menu{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer}
+        @media(max-width:850px){
+          .navlinks{display:none}
+          .mobile-menu{display:block}
+          .quick-grid{grid-template-columns:1fr 1fr}
+          .quick-item:nth-child(2){border-right:0}
+          .quick-item:nth-child(-n+2){border-bottom:1px solid #d5e5e7}
+          .about-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
+          .about-image{height:340px;box-shadow:12px 12px 0 rgba(23,75,90,.08)}
+          .features,.room-list{grid-template-columns:1fr}
+          .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+          .g1{grid-row:auto;grid-column:1/3}
+          form{grid-template-columns:1fr}
+          .full{grid-column:auto}
+          section{padding:70px 0}
+        }
+      ` }} />
+
+      <div dangerouslySetInnerHTML={{ __html: `
+      <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -243,7 +357,52 @@ document.getElementById('bookingForm').addEventListener('submit', async function
 </script>
 </body>
 </html>
+      ` }} />
 
-    ` }} />
+      <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" />
+      <script dangerouslySetInnerHTML={{ __html: `
+        var db = window.supabase.createClient('https://umpiasberurevfctywqv.supabase.co','sb_publishable_pCHFJ83v40aLkRNXipu3CA_OMkR4PYW');
+
+        function toggleMenu(){
+          var n=document.getElementById('navlinks');
+          if(getComputedStyle(n).display==='none'){n.style.display='flex';n.style.position='absolute';n.style.top='72px';n.style.left='0';n.style.right='0';n.style.background='#174b5a';n.style.padding='18px';n.style.flexDirection='column'}
+          else n.removeAttribute('style');
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', async function(e){
+          e.preventDefault();
+          var b=document.getElementById('submitBtn');
+          var n=document.getElementById('formNotice');
+          b.disabled=true;
+          b.textContent='Sending...';
+          n.textContent='Please wait...';
+          n.style.color='';
+
+          var result = await db.from('bookings').insert([{
+            guest_name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value || null,
+            guests: parseInt(document.getElementById('guests').value),
+            check_in: document.getElementById('checkin').value,
+            check_out: document.getElementById('checkout').value,
+            room_type: document.getElementById('room').value,
+            special_requests: document.getElementById('requests').value || null,
+            status: 'pending',
+            owner_notified: false,
+            confirmation_sent: false
+          }]);
+
+          if(result.error){
+            n.textContent='Error. Please call +264 81 575 7152.';
+            n.style.color='#c53030';
+            b.disabled=false;
+            b.textContent='Send Booking Request';
+            return;
+          }
+          document.getElementById('bookingForm').style.display='none';
+          document.getElementById('bookingSuccess').classList.add('show');
+        });
+      ` }} />
+    </>
   )
 }
